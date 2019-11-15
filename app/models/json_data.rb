@@ -1,0 +1,2 @@
+class JsonData < ApplicationRecord
+end

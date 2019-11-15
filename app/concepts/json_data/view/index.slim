@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Teamvoy test task
+  body
+    = form_tag json_data_search_path, method: :post, role: "json_data" do
+      = text_field_tag :search_values, params[:search_values], class: "form-control"
+      = submit_tag "Search"
+
+
+    table.table.table-striped
+      thead
+        tr
+          th scope="col" Name
+          th scope="col" Type
+          th scope="col" Designed by
+      tbody
+        - model.each do |m|
+          tr
+            td = m['Name']
+            td = m['Type']
+            td = m['Designed by']
+      
